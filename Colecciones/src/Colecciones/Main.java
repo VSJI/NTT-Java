@@ -1,6 +1,8 @@
 package Colecciones;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class Main {
@@ -62,7 +64,30 @@ public class Main {
 			
 			// Importante castear a String la pila, ya que inicialmente la definimos sin ningún tipo.
 			
-		// Queue
+		// Queue - Cola. FIFO, First In First Out. IMPORTANTE, no es recomendable fijar un tamaño ya que es dinámico, aunque se puede
+				// -> Add - Para insertar elementos en la cola
+				// -> poll - Para eliminar el primer elemento de la cola
+				// -> peek - Para consultar el primer elemento de la cola
+			
+				// Ejemplo de contexto: la fila de un cine para comprar entradas.
+			
+			//Queue NO es una clase, es una interfaz
+			
+			Queue cola = new LinkedList();
+			
+			// Restringir la cola con tipo Integer:
+			Queue<Integer> cola2 = new LinkedList();
+			
+			cola.add(5);
+			cola.add(10);
+			cola.add(15);
+			
+			System.out.println("Cola:\n" + cola + "\n");
+			System.out.println("Primer elemento de la cola:\n" + cola.peek() + "\n");
+			System.out.println("Eliminamos elemento de la cola: \"" + cola.poll() + "\", y queda en la cola:\n" + cola);
+			
+			
+			
 		// HastTable
 		
 	}
